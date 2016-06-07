@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JSBattles</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+		<link rel="shortcut icon" href="favicon.ico">
+	</head>
+	<body>
+		<div class="container" style="text-align:center;">
+			<div class="row">
+				<h1 id="title"></h1>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-xs-6" style="text-align:left; padding-left: 10%;">
+					<h1 id="playertitle"></h1>
+					<div id="player" style="height:256px; background-repeat:no-repeat; background-position:left top; background-size:auto 100%;"></div>
+					<h2>Health: <span id="playerhealth">1000</span>/1000</h2>
+				</div>
+				<div class="col-xs-6" style="text-align:right; padding-right: 10%;">
+					<h1 id="enemytitle"></h1>
+					<div id="enemy" style="height:256px; background-repeat:no-repeat; background-position:right top; background-size:auto 100%;"></div>
+					<h2>Health: <span id="enemyhealth">1000</span>/1000</h2>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<h2 id="battlenotes"></h2>
+				<div id="attacklist"></div>
+				<hr>
+				<button class="btn btn-lg btn-warning" data-toggle="modal" data-target="#info">Attack Information</button>
+				<hr>
+				<p>Powered by <a href="">JSBattles</a></p>
+			</div>
+		</div>
+		<div class="modal fade" id="info" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title">Attack Information</h2>
+					</div>
+					<div class="modal-body">
+						<h4><strong>Slash:</strong> 1&times; Damage, 100% Hit Rate</h4>
+						<h4><strong>Stab:</strong> 2&times; Damage, 50% Hit Rate</h4>
+						<h4><strong>Shoot:</strong> 1.5&times; Damage, 75% Hit Rate</h4>
+						<h4><strong>Defend:</strong> Take 75% Less Damage When Attacked Next</h4>
+						<h4><strong>Dodge:</strong> 50% Chance To Take No Damage When Attacked Next</h4>
+						<h4><strong>Heal:</strong> Recover Some Health</h4>
+						<h4><strong>Fireball:</strong> 1.5&times; Damage, 75% Hit Rate</h4>
+						<h4><strong>Thunder:</strong> 2.5&times; Damage, 25% Hit Rate</h4>
+						<h4><strong>Dark Arts:</strong> 4&times; Damage, 15% Hit Rate</h4>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-lg btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/battle.js"></script>
+	</body>
+</html>
